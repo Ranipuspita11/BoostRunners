@@ -329,7 +329,7 @@ build_kernel() {
 
 	if [ "$PTTG" = 1 ]
  	then
-		tg_post_msg "<b>🔌Group On: [<a href='https://t.me/Random_iDn'>@Random_iDn</a>]</b>%0A<b>🔌Builder Name: </b><code>$AUTHOR</code>%0A<b>🔌Straight: </b><code>[#$KBUILD_BUILD_VERSION]-[$COMPILER]</code>%0A<b>🔌Machine: </b><code>$DISTRO</code>%0A<b>🔌Kernel: </b><code>$KERVER</code>%0A<b>🔌PipeLine: </b><code>$(uname -a | awk -F: '{ print $1 }')</code>%0A<b>🔌Core: </b><code>$PROCS</code>%0A<b>🔌Tools: </b><code>$KBUILD_COMPILER_STRING</code>%0A<b>🔌Branch: </b><code>$CI_BRANCH</code>%0A<b>🔌Commit: </b><code>$COMMIT_HEAD</code>%0A[<a href='$SERVER_URL'><a href='https://t.me/RandomiDn'>©Channel</a>]</a>"
+		tg_post_msg "<b>🔌Group On: </b><code>[<a href='https://t.me/Random_iDn'>@Random_iDn</a>]</code>%0A<b>🔌Builder: </b><code>$AUTHOR</code>%0A<b>🔌Straight: </b><code>[#$KBUILD_BUILD_VERSION]-[$COMPILER]</code>%0A<b>🔌Machine: </b><code>$DISTRO</code>%0A<b>🔌Kernel: </b><code>$KERVER</code>%0A<b>🔌PipeLine: </b><code>$(uname -a | awk -F: '{ print $1 }')</code>%0A<b>🔌Core: </b><code>$PROCS</code>%0A<b>🔌Tools: </b><code>$KBUILD_COMPILER_STRING</code>%0A<b>🔌Branch: </b><code>$CI_BRANCH</code>%0A<b>🔌Commit: </b><code>$COMMIT_HEAD</code>%0A[<a href='$SERVER_URL'><a href='https://t.me/RandomiDn'>©Channel</a>]</a>"
 	fi
 
 	make O=out $DEFCONFIG
@@ -445,7 +445,7 @@ gen_zip() {
 
 	if [ "$PTTG" = 1 ]
  	then
-	    tg_post_build "$ZIP_FINAL.zip" "<b>🛠Successfull Kernel for device #riva / #rolex </b>%0A<b>Minutes: </b><code>$((DIFF / 60))(s)</code>%0A<b>Seconds: </b><code>$((DIFF % 60))(s)</code>"
+	    tg_post_build "$ZIP_FINAL.zip" "🛠Successfull Kernel for device #riva / #rolex %0AMinutes: $((DIFF / 60))(s) %0ASeconds: $((DIFF % 60))(s)"
 	    if [ $MODULES = "1" ]
 	    then
 		cd ../Mod
