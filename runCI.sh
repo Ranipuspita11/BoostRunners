@@ -21,7 +21,7 @@ msg "|| Update && Upgrade Package ||"
 #
 #
 export Anykernel3="$(pwd)/Anykernel3"
-export ZIPNAME="PTForm"
+export ZIPNAME="Kernel"
 # 
 export DEBIAN_FRONTEND=noninteractive
 export TZ=Asia/Jakarta
@@ -329,7 +329,7 @@ build_kernel() {
 
 	if [ "$PTTG" = 1 ]
  	then
-		tg_post_msg "<b>🔌Group On: </b><u>[<a href='https://t.me/Random_iDn'>@Random_iDn</a>]</u>%0A<b>🔌Builder: </b><code>$AUTHOR</code>%0A<b>🔌Straight: </b><code>[#$KBUILD_BUILD_VERSION]-[$COMPILER]</code>%0A<b>🔌Machine: </b><code>$DISTRO</code>%0A<b>🔌Kernel: </b><code>$KERVER</code>%0A<b>🔌PipeLine: </b><code>$(uname -a | awk -F: '{ print $1 }')</code>%0A<b>🔌Core: </b><code>$PROCS</code>%0A<b>🔌Tools: </b><code>$KBUILD_COMPILER_STRING</code>%0A<b>🔌Branch: </b><code>$CI_BRANCH</code>%0A<b>🔌Commit: </b><code>$COMMIT_HEAD</code>%0A[<a href='$SERVER_URL'><a href='https://t.me/RandomiDn'>©Channel</a>]</a>"
+		tg_post_msg "<b>🔌Group On: </b><u>[<a href='https://t.me/Random_iDn'>Random_iDn</a>]</u>%0A<b>🔌Builder: </b><code>Ivan Ssl $AUTHOR</code>%0A<b>🔌Straight: </b><code>[#$KBUILD_BUILD_VERSION]-[$COMPILER]</code>%0A<b>🔌Machine: </b><code>$DISTRO</code>%0A<b>🔌Kernel: </b><code>$KERVER</code>%0A<b>🔌PipeLine: </b><code>$(uname -a | awk -F: '{ print $1 }')</code>%0A<b>🔌Core: </b><code>$PROCS</code>%0A<b>🔌Tools: </b><code>$KBUILD_COMPILER_STRING</code>%0A<b>🔌Branch: </b><code>$CI_BRANCH</code>%0A<b>🔌Commit: </b><code>$COMMIT_HEAD</code>%0A[<a href='$SERVER_URL'><a href='https://t.me/RandomiDn'>©Channel</a>]</a>"
 	fi
 
 	make O=out $DEFCONFIG
@@ -428,7 +428,7 @@ gen_zip() {
 	fi
 
 	## Prepare a final zip variable
-	ZIP_FINAL="$ZIPNAME-$DEVICE-Carnage"
+	ZIP_FINAL="$ZIPNAME-$DEVICE-Carnage-#$KBUILD_BUILD_VERSION"
 
 	if [ $SIGN = 1 ]
 	then
@@ -440,12 +440,12 @@ gen_zip() {
  		fi
 		curl -sLo zipsigner-3.0.jar https://raw.githubusercontent.com/RandomiDn/AnyKernel3/stock-riva/zipsigner-3.0.jar
 		java -jar zipsigner-3.0.jar "$ZIP_FINAL".zip "$ZIP_FINAL"-signed.zip
-		ZIP_FINAL="$ZIP_FINAL-sig"
+		ZIP_FINAL="$ZIP_FINAL-signed"
 	fi
 
 	if [ "$PTTG" = 1 ]
  	then
-	    tg_post_build "$ZIP_FINAL.zip" "🛠Successfull Kernel for device #riva / #rolex %0AMinutes: $((DIFF / 60))(s) %0ASeconds: $((DIFF % 60))(s)"
+	    tg_post_build "$ZIP_FINAL.zip" "🛠Successfull Kernel for device #riva / #rolex Min: $((DIFF / 60))(s) Sec: $((DIFF % 60))(s)"
 	    if [ $MODULES = "1" ]
 	    then
 		cd ../Mod
