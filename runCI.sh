@@ -20,9 +20,6 @@ msg() {
 }
 msg "|| Update && Upgrade Package ||"
 #
-export token="1923840908:AAGKarBD_hD1cFgWlYA8HifnEtv2T_yE5vw"
-export Anykernel3="$(pwd)/Anykernel3"
-export ZIPNAME="Platf"
 #
 # 
 export DEBIAN_FRONTEND=noninteractive
