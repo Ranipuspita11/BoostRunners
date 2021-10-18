@@ -129,7 +129,7 @@ AUTHOR="@Arrayfs"
 # Architecture
 ARCH=arm64
 # The name of the device for which the kernel is built
-MODEL="Xiaomi f"
+MODEL="Xiaomi Redmi"
 # The codename of the device
 DEVICE=riva
 # The defconfig which should be used. Get it from config.gz from
