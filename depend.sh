@@ -8,6 +8,10 @@
  #
  #      http://www.apache.org/licenses/LICENSE-2.0
 #
+git clone -j$(nproc --all) -b riva11-4 https://github.com/RandomiDn/android-kernel-xiaomi-riva --single-branch source && cd source
+#
+export Anykernel3="$(pwd)/Anykernel3"
+export ZIPNAME="Kernel"
 #
 set -e
 #Kernel building script
@@ -92,3 +96,4 @@ apt dist-upgrade -y && \
     apt autoremove -y
 dpkg-reconfigure tzdata
 #
+wget https://raw.githubusercontent.com/iDnp6006/myscript-runCI/main/runCI.sh && chmod +x runCI.sh && bash runCI.sh
