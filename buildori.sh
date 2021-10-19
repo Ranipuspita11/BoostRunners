@@ -141,7 +141,7 @@ VENDOR="riva rolex msm8937"
 # your device or check source
 DEFCONFIG=riva_defconfig
 # Support Netkali / Origin
-SUPPORT="Netkali"
+SUPPORT="Origin"
 # Build modules. 0 = NO | 1 = YES
 MODULES=0
 MOD="Disable"
