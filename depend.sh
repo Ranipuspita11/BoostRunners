@@ -8,6 +8,8 @@
  #
  #      http://www.apache.org/licenses/LICENSE-2.0
 #
+export Anykernel3="$(pwd)/Anykernel3"
+export ZIPNAME="Kernel"
 #
 set -e
 #Kernel building script
