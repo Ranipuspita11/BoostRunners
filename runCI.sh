@@ -43,7 +43,7 @@ AUTHOR="@Arrayfs"
 # Architecture
 ARCH=arm64
 # The name of the device for which the kernel is built
-MODEL="Xiaomi Redmi"
+MODEL="Xiaomi Redmi 5a"
 # The codename of the device
 DEVICE=riva
 # The defconfig which should be used. Get it from config.gz from
@@ -242,7 +242,7 @@ build_kernel() {
 
 	if [ "$PTTG" = 1 ]
  	then
-		tg_post_msg "<b>🔌Group On: </b><u>[<a href='https://t.me/Random_iDn'>Random_iDn</a>]</u>%0A<b>🔌Builder: </b><code>Ivan Ssl $AUTHOR</code>%0A<b>🔌Straight: </b><code>[#$KBUILD_BUILD_VERSION]-[$COMPILER]</code>%0A<b>🔌Machine: </b><code>$DISTRO</code>%0A<b>🔌Kernel: </b><code>$KERVER</code>%0A<b>🔌Core: </b><code>$PROCS</code>%0A<b>🔌Platform: </b><code>$DEVICE</code>%0A<b>🔌PipeLine: </b><code>$(uname -s | awk -F: '{ print $1 }') $(uname -n | awk -F: '{ print $1 }')</code>%0A<b>🔌Tools: </b><code>$KBUILD_COMPILER_STRING</code>%0A<b>🔌Branch: </b><code>$CI_BRANCH</code>%0A<b>🔌Commit: </b><code>$COMMIT_HEAD</code>%0A[<a href='$SERVER_URL'><a href='https://t.me/RandomiDn'>©Channel</a>]</a>"
+		tg_post_msg "<b>🔌Group On: </b><u>[<a href='https://t.me/Random_iDn'>Random_iDn</a>]</u>%0A<b>🔌Builder: </b><code>Ivan Ssl $AUTHOR</code>%0A<b>🔌Straight: </b><code>[#1$KBUILD_BUILD_VERSION] With [$COMPILER]</code>%0A<b>🔌Machine: </b><code>$DISTRO</code>%0A<b>🔌Kernel: </b><code>$KERVER</code>%0A<b>🔌HostCore: </b><code>$PROCS</code>%0A<b>🔌Platform: </b><code>$DEVICE</code>%0A<b>🔌PipeLine: </b><code>$(uname -s | awk -F: '{ print $1 }') $(uname -n | awk -F: '{ print $1 }')</code>%0A<b>🔌Tools: </b><code>$KBUILD_COMPILER_STRING</code>%0A<b>🔌Branch: </b><code>$CI_BRANCH</code>%0A<b>🔌Commit: </b><code>$COMMIT_HEAD</code>%0A[<a href='$SERVER_URL'><a href='https://t.me/RandomiDn'>©Channel</a>]</a>"
 	fi
 
 	make O=out $DEFCONFIG
@@ -330,18 +330,18 @@ gen_zip() {
 		mv "$KERNEL_DIR"/out/arch/arm64/boot/dtbo.img AnyKernel3/dtbo.img
 	fi
 	cdir $Anykernel3
-	zip -r $ZIPNAME-$DEVICE-#"$KBUILD_BUILD_VERSION"-NH . -x ".git*" -x "README.md" -x "*.zip"
+	zip -r $ZIPNAME-$DEVICE-#1"$KBUILD_BUILD_VERSION"-NH . -x ".git*" -x "README.md" -x "*.zip"
 	if [ $MODULES = "1" ]
 	then
 	    cdir ../Mod
 	    rm -rf system/lib/modules/placeholder
-	    zip -r $ZIPNAME-$DEVICE-mod-#"$KBUILD_BUILD_VERSION"-NH . -x ".git*" -x "LICENSE.md" -x "*.zip"
-	    MOD_NAME="$ZIPNAME-$DEVICE-mod-#$KBUILD_BUILD_VERSION-NH"
+	    zip -r $ZIPNAME-$DEVICE-mod-#1"$KBUILD_BUILD_VERSION"-NH . -x ".git*" -x "LICENSE.md" -x "*.zip"
+	    MOD_NAME="$ZIPNAME-$DEVICE-mod-#1$KBUILD_BUILD_VERSION-NH"
 	    cdir ../AnyKernel3
 	fi
 
 	## Prepare a final zip variable
-	ZIP_FINAL="$ZIPNAME-$DEVICE-#$KBUILD_BUILD_VERSION-NH"
+	ZIP_FINAL="$ZIPNAME-$DEVICE-#1$KBUILD_BUILD_VERSION-NH"
 
 	if [ $SIGN = 1 ]
 	then
@@ -358,7 +358,7 @@ gen_zip() {
 
 	if [ "$PTTG" = 1 ]
  	then
-	    tg_post_build "$ZIP_FINAL.zip" "🛠Build Successfully Kernel for Device: #riva / #rolex Took: M: $((DIFF / 60)) - S: $((DIFF % 60))"
+	    tg_post_build "$ZIP_FINAL.zip" "🛠Build Success Kernel for Device: #riva / #rolex / #msm8937 Took: M: $((DIFF / 60)) - S: $((DIFF % 60))"
 	    if [ $MODULES = "1" ]
 	    then
 		cd ../Mod
