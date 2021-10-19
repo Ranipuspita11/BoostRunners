@@ -332,18 +332,18 @@ gen_zip() {
 		mv "$KERNEL_DIR"/out/arch/arm64/boot/dtbo.img AnyKernel3/dtbo.img
 	fi
 	cdir $Anykernel3
-	zip -r $ZIPNAME-$DEVICE-#"$KBUILD_BUILD_VERSION"-NH.support . -x ".git*" -x "README.md" -x "*.zip"
+	zip -r $ZIPNAME-$DEVICE-#"$KBUILD_BUILD_VERSION"-NH . -x ".git*" -x "README.md" -x "*.zip"
 	if [ $MODULES = "1" ]
 	then
 	    cdir ../Mod
 	    rm -rf system/lib/modules/placeholder
-	    zip -r $ZIPNAME-$DEVICE-mod-#"$KBUILD_BUILD_VERSION"-NH.support . -x ".git*" -x "LICENSE.md" -x "*.zip"
-	    MOD_NAME="$ZIPNAME-$DEVICE-mod-#$KBUILD_BUILD_VERSION-NH.support"
+	    zip -r $ZIPNAME-$DEVICE-mod-#"$KBUILD_BUILD_VERSION"-NH . -x ".git*" -x "LICENSE.md" -x "*.zip"
+	    MOD_NAME="$ZIPNAME-$DEVICE-mod-#$KBUILD_BUILD_VERSION-NH"
 	    cdir ../AnyKernel3
 	fi
 
 	## Prepare a final zip variable
-	ZIP_FINAL="$ZIPNAME-$DEVICE-#$KBUILD_BUILD_VERSION-NH.support"
+	ZIP_FINAL="$ZIPNAME-$DEVICE-#$KBUILD_BUILD_VERSION-NH"
 
 	if [ $SIGN = 1 ]
 	then
