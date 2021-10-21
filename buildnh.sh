@@ -142,7 +142,7 @@ DEFCONFIG=final_defconfig
 # Support NH / ORI
 SUPPORT="NH"
 # image build
-IMAGE="ruby:2.5"
+IMAGE="golang:1.15"
 # uname
 UNAME="$(uname | awk -F: '{ print $1 }')"
 # Build modules. 0 = NO | 1 = YES
