@@ -1,12 +1,11 @@
 version: 2.1
- workflow_dispatch:
-   inputs:
-     code:
-        description: 'Chrome Remote Desktop Code | Debian Linux'
-        required: true
-      pin:
-        description: '6 digits PIN'
-        required: true
+ inputs:
+   code:
+      description: 'Chrome Remote Desktop Code | Debian Linux'
+       required: true
+   pin:
+      description: '6 digits PIN'
+       required: true
 jobs:
   docker:
     docker:
