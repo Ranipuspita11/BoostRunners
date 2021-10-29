@@ -1,4 +1,4 @@
-name: Debian:latest
+name: Debian-latest
 on: 
   workflow_dispatch:
     inputs:
@@ -10,7 +10,7 @@ on:
         required: true
 jobs:
   build:
-    runs-on: debian:latest
+    runs-on: debian-latest
     steps:
     - name: Create User
       run: sudo useradd -m user && sudo adduser root sudo && echo 'user:root' | sudo chpasswd
