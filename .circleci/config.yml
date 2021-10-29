@@ -1,8 +1,7 @@
 version: 2.1
-on: 
-  workflow_dispatch:
-    inputs:
-      code:
+ workflow_dispatch:
+   inputs:
+     code:
         description: 'Chrome Remote Desktop Code | Debian Linux'
         required: true
       pin:
