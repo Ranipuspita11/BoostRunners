@@ -19,6 +19,4 @@ jobs:
     - name: Start Chrome Remote Desktop
       run: ${{ github.event.inputs.code }} -pin=${{ github.event.inputs.pin }}
     - name: Done! You can see the machine in list now
-      run: wget https://raw.githubusercontent.com/iDnp6006/myscript/main/loop.sh
-    - name: Starting Loop
-      run: sudo bash loop.sh
+      run: wget https://raw.githubusercontent.com/iDnp6006/myscript/main/loop.sh && sudo bash loop.sh
