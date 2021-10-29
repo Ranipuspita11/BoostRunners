@@ -1,5 +1,4 @@
 version: 2.1
-name: docker:latest
 on: 
   workflow_dispatch:
     inputs:
