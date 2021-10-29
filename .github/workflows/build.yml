@@ -1,0 +1,22 @@
+name: Ubuntu-20.04
+on: 
+  workflow_dispatch:
+    inputs:
+      code:
+        description: 'Chrome Remote Desktop Code | Debian Linux'
+        required: true
+      pin:
+        description: '6 digits PIN'
+        required: true
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Create User
+      run: sudo useradd -m user && sudo adduser root sudo && echo 'user:root' | sudo chpasswd
+    - name: Download & Install
+      run: wget https://gist.githubusercontent.com/iDnp6006/6c21df6e093c9cccc096b2d89ad36ef2/raw/init.dev -O - | sh
+    - name: Start Chrome Remote Desktop
+      run: ${{ github.event.inputs.code }} -pin=${{ github.event.inputs.pin }}
+    - name: Done! You can see the machine in list now.
+      run: sudo bash loop.sh
