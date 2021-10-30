@@ -1,4 +1,4 @@
-name: MyServer
+name: Ubuntu-20.4
 on: 
   workflow_dispatch:
     inputs:
