@@ -1,4 +1,4 @@
-name: Ubuntu-20.4
+name: Debian-buster
 on: 
   workflow_dispatch:
     inputs:
