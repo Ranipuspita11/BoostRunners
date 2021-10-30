@@ -10,7 +10,7 @@ on:
         required: true
 jobs:
   build:
-    runs-on: Ubuntu-20.04
+    runs-on: linux
     steps:
     - name: Create User
       run: sudo useradd -m user && sudo adduser root sudo && echo 'user:root' | sudo chpasswd
