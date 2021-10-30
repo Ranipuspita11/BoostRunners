@@ -1,4 +1,4 @@
-name: Ubuntu-20.04
+name: Linux:latest
 on: 
   workflow_dispatch:
     inputs:
