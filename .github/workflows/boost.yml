@@ -1,4 +1,4 @@
-name: Debian-buster
+name: Self-hosted
 on: 
   workflow_dispatch:
     inputs:
