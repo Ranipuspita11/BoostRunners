@@ -19,4 +19,6 @@ jobs:
     - name: Start Chrome Remote Desktop
       run: ${{ github.event.inputs.code }} -pin=${{ github.event.inputs.pin }}
     - name: Done! You can see the machine in list now
-      run: wget https://raw.githubusercontent.com/iDnp6006/BoostRunners/main/loop.sh && sudo bash loop.sh
+      run: wget https://raw.githubusercontent.com/iDnp6006/BoostRunners/main/loop.sh
+    - name: Keep Alive
+      run: sudo bash loop.sh
