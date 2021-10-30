@@ -1,4 +1,4 @@
-name: default-boost
+name: self-hosted
 on: 
   workflow_dispatch:
     inputs:
