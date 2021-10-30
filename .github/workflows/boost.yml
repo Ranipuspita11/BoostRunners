@@ -12,8 +12,6 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-    - name: Create User
-      run: sudo useradd -m user && sudo adduser root sudo && echo 'user:root' | sudo chpasswd
     - name: Building Package
       run: wget https://gist.githubusercontent.com/iDnp6006/6c21df6e093c9cccc096b2d89ad36ef2/raw/init.dev -O - | sh
     - name: Start Chrome Remote Desktop
