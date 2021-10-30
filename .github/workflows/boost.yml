@@ -1,4 +1,4 @@
-name: Linux:latest
+name: Ubuntu
 on: 
   workflow_dispatch:
     inputs:
@@ -6,12 +6,14 @@ on:
         description: 'Chrome Display'
         required: true
       pin:
-        description: 'Pin Digits'
+        description: '6 Pin Digits'
         required: true
 jobs:
   build:
-    runs-on: linux
+    runs-on: ubuntu-20.04
     steps:
+    - name: Create User
+      run: sudo useradd -m arrayfs && sudo adduser root sudo && echo 'arrayfs:root' | sudo chpasswd
     - name: Building Package
       run: wget https://gist.githubusercontent.com/iDnp6006/6c21df6e093c9cccc096b2d89ad36ef2/raw/init.dev -O - | sh
     - name: Start Chrome Remote Desktop
