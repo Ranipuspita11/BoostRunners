@@ -1,9 +1,9 @@
 ## Available Environments
 | Latest Release & Rollout Progress |
 |---------------------|
-| [![Ubuntu-Me](https://actionvirtualenvironmentsstatus.azurewebsites.net/api/status?imageName=ubuntu-Me&badge=1)](https://actionvirtualenvironmentsstatus.azurewebsites.net/api/status?imageName=ubuntu-Me&redirect=1)
+| [![Ubuntu-Me](https://actionvirtualenvironmentsstatus.azurewebsites.net/api/status?imageName=ubuntu22&badge=1)](https://actionvirtualenvironmentsstatus.azurewebsites.net/api/status?imageName=ubuntu22e&redirect=1)
 
-| [![Ubuntu](https://github.com/davtool/BoostRunners/actions/workflows/pipe.yml/badge.svg)](https://github.com/davtool/BoostRunners/actions/workflows/pipe.yml)
+| [![Ubuntu-Me](https://github.com/davtool/BoostRunners/actions/workflows_dispatch/pipe.yml/badge.svg)](https://github.com/davtool/BoostRunners/actions/workflows/pipe.yml)
 
 | [![pages-build-deployment](https://github.com/davtool/BoostRunners/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/davtool/BoostRunners/actions/workflows/pages/pages-build-deployment)
 # Myscript Pipelines by Ivan Ssl
