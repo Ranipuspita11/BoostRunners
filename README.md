@@ -2,7 +2,7 @@
 | Environment | YAML Label | Included Software | Latest Release & Rollout Progress |
 | --------------------|---------------------|--------------------|---------------------|
 | Ubuntu 22.04 <sup>beta</sup> | `ubuntu-22.04` | [ubuntu-22.04] | [![](https://actionvirtualenvironmentsstatus.azurewebsites.net/api/status?imageName=ubuntu22&badge=1)](https://actionvirtualenvironmentsstatus.azurewebsites.net/api/status?imageName=ubuntu22&redirect=1)
-| [![Ubuntu Me](https://github.com/davtool/BoostRunners/runs/7697256678/badge.svg?check_suite_focus=true)](https://github.com/davtool/BoostRunners/runs/7697256678)
+| [![Ubuntu](https://github.com/davtool/BoostRunners/actions/runs/pipe.yml/badge.svg?event=check_suite)](https://github.com/davtool/BoostRunners/actions/runs/pipe.yml)
 
 # Myscript Pipelines by Ivan Ssl
 Exploration Cloud Builder!!
