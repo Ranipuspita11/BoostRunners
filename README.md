@@ -1,5 +1,10 @@
-[![Ubuntu](https://github.com/davtool/BoostRunners/actions/workflows/pipe.yml/badge.svg?branch=main)](https://github.com/davtool/BoostRunners/actions/workflows/pipe.yml)
+[![Ubuntu](https://github.com/davtool/BoostRunners/actions/.github//workflows/pipe.yml/badge.svg?branch=main)](https://github.com/davtool/BoostRunners/actions/.github/workflows/pipe.yml)
 
+## Available Environments
+| Environment | YAML Label | Included Software | Latest Release & Rollout Progress |
+| --------------------|---------------------|--------------------|---------------------|
+| Ubuntu 22.04 <sup>beta</sup> | `ubuntu-22.04` | [ubuntu-22.04] | [![](https://actionvirtualenvironmentsstatus.azurewebsites.net/api/status?imageName=ubuntu22&badge=1)](https://actionvirtualenvironmentsstatus.azurewebsites.net/api/status?imageName=ubuntu22&redirect=1)
+| Ubuntu 20.04 | `ubuntu-latest` or `ubuntu-20.04` | [ubuntu-20.04] | [![](https://actionvirtualenvironmentsstatus.azurewebsites.net/api/status?imageName=ubuntu20&badge=1)](https://actionvirtualenvironmentsstatus.azurewebsites.net/api/status?imageName=ubuntu20&redirect=1)
 # Myscript Pipelines by Ivan Ssl
 Exploration Cloud Builder!!
 
