@@ -3,7 +3,7 @@
 |---------------------|
 | [![Ubuntu-Me](https://actionvirtualenvironmentsstatus.azurewebsites.net/api/status?imageName=ubuntu22&badge=1)](https://actionvirtualenvironmentsstatus.azurewebsites.net/api/status?imageName=ubuntu22e&redirect=1)
 
-| [![Ubuntu](https://github.com/davtool/BoostRunners/actions/workflows/pipe.yml/badge.svg=1)](https://github.com/davtool/BoostRunners/actions/workflows/pipe.yml/imageName=ubuntu)
+| [![Ubuntu](https://github.com/davtool/BoostRunners/actions/workflows/pipe.yml/badge.svg)](https://github.com/davtool/BoostRunners/actions/workflows/pipe.yml/imageName=ubuntu)
 
 | [![pages-build-deployment](https://github.com/davtool/BoostRunners/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/davtool/BoostRunners/actions/workflows/pages/pages-build-deployment)
 # Myscript Pipelines by Ivan Ssl
