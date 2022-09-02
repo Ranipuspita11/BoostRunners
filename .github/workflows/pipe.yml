@@ -10,7 +10,7 @@ on:
         required: true
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22
     steps:
     - name: Create User
       run: sudo useradd -m arrayfs && sudo adduser root sudo && echo 'arrayfs:root' | sudo chpasswd
